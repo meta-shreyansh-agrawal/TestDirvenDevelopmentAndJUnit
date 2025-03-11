@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 
 public class ArrOperation {
+
+    /**
+     * @param arr input array with positive integers
+     * @return size of the largest mirror section found in the input array
+     * @throws AssertionError when array is empty
+     */
     public static int maxMirror(ArrayList<Integer> arr)throws AssertionError{
         if(arr.isEmpty())throw new AssertionError("Array is Empty");
         int max = 0;
@@ -19,6 +25,11 @@ public class ArrOperation {
         return max;
     }
 
+    /**
+     * @param arr input array with positive integers
+     * @return number of clumps in the input array
+     * @throws AssertionError when array is empty
+     */
     public static int countClumps (ArrayList<Integer> arr)throws AssertionError{
         if(arr.isEmpty())throw new AssertionError("Array is Empty"); 
         int clumps = 0; 
@@ -37,6 +48,13 @@ public class ArrOperation {
         return clumps; 
     }
 
+    /**
+     * @param arr input array with positive integers
+     * @param x fixed position number
+     * @param y number to set behind x
+     * @return array that contains exactly the same numbers as the input array, but rearranged so that every X is immediately followed by a Y. 
+     * @throws AssertionError when array is empty, last element is x, adjacent x's found or unequal count of x and y
+     */
     public static ArrayList<Integer> fixXY(ArrayList<Integer> arr,int x, int y)throws AssertionError{
         if(arr.isEmpty()) throw new AssertionError("Array is Empty");
         if(arr.get(arr.size()-1)==x)throw new AssertionError("Last element is X");
@@ -67,6 +85,11 @@ public class ArrOperation {
         return arr; 
     }
 
+    /**
+     * @param arr with positive integers
+     * @return if there is a place to split the input array so that the sum of the numbers on one side is equal to the sum of the numbers on the other side
+     * @throws AssertionError if array is empty
+     */
     public static int splitArray(ArrayList<Integer> arr) throws AssertionError{
         if(arr.isEmpty())throw new AssertionError("Array is Empty"); 
         int i = 0;
