@@ -11,16 +11,16 @@ public class Tests {
     public void testMaxMirror(){
         
         ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 8, 9, 3, 2, 1)); 
-        assertEquals(2,ArrOperation.maxMirror(arr));
+        assertEquals(3,ArrOperation.maxMirror(arr));
         
         ArrayList<Integer> arr1 = new ArrayList<Integer>(Arrays.asList(7, 1, 4, 9, 7, 4, 1)); 
         assertEquals(2,ArrOperation.maxMirror(arr1));
         
         ArrayList<Integer> arr2 = new ArrayList<Integer>(Arrays.asList(1, 2, 1, 4)); 
-        assertEquals(2,ArrOperation.maxMirror(arr2));
+        assertEquals(3,ArrOperation.maxMirror(arr2));
         
         ArrayList<Integer> arr3 = new ArrayList<Integer>(Arrays.asList(1, 4, 5, 3, 5, 4, 1)); 
-        assertEquals(2,ArrOperation.maxMirror(arr3));
+        assertEquals(7,ArrOperation.maxMirror(arr3));
 
         assertThrows(AssertionError.class,()->ArrOperation.maxMirror(new ArrayList<Integer>())); 
     }
